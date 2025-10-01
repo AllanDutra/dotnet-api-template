@@ -6,13 +6,12 @@ public static class InfrastructureModule
 {
     public static IServiceCollection AddInfrastructureModule(this IServiceCollection services)
     {
-        // services.AddDbContext<AnunciosContext>(p =>
-        //     p.UseNpgsql(Variaveis.Contextos.Anuncios.ConnectionString)
+        // ? Example
+        // services.AddDbContext<ClientsContext>(p =>
+        //     p.UseNpgsql(Variables.Contexts.Clients.ConnectionString)
         // );
 
-        // services
-        //     .AddRepositories()
-        //     .AddStorages();
+        services.AddRepositories();
 
         return services;
     }
