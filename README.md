@@ -61,6 +61,10 @@ O objetivo deste template é simplificar o processo de criação de uma nova API
 
 De tempos em tempos tentarei atualizar a versão LTS do framework a fim de acompanhar a evolução da tecnologia, sempre mantendo o template utilizável.
 
+## 🤔 Dúvidas Frequentes
+
+- O arquivo .gitkeep presente em algumas pastas foi criado apenas para que o git considerasse a pasta para o commit. Assim que baixar o repositório pode apagar o arquivo sem problemas.
+
 ## 🎈 Sugestões
 
 _Digite aqui suas possíveis sugestões para incrementos de melhorias no template._
