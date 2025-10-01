@@ -51,7 +51,7 @@ O objetivo deste template é simplificar o processo de criação de uma nova API
 
 11. Entre dentro da pasta da camada Api e execute os comandos `dotnet restore` e `dotnet build` para assegurar que tudo está funcionando normalmente;
 
-12. Se tiver feito corretamente todos os passos anteriores, ao executar `dotnet run` seu Swagger estará disponível em http://localhost:5504;
+12. Se tiver feito corretamente todos os passos anteriores, ao executar `dotnet run` seu Swagger estará disponível em http://localhost:5043;
 
 13. Por fim, basta executar seu git init na pasta raíz e seguir com o código do seu novo projeto!
 
