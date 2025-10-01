@@ -39,17 +39,7 @@ public class GlobalExceptionMiddleware(IServiceProvider serviceProvider) : IMidd
             httpContext.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
             await httpContext.Response.WriteAsJsonAsync(
-                new DefaultResponseViewModel(
-                    [
-                        Variables.General.Env != "dev"
-                            ? DEFAULT_ERROR_MESSAGE
-                            : (
-                                exception.InnerException?.Message
-                                ?? exception.Message
-                                ?? DEFAULT_ERROR_MESSAGE
-                            ),
-                    ]
-                )
+                new DefaultResponseViewModel([errorMessage])
             );
         }
     }

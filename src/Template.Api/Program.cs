@@ -1,6 +1,7 @@
 using Template.Api.Extensions;
 using Template.Api.Middlewares;
 using Template.Application;
+using Template.Core;
 using Template.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);

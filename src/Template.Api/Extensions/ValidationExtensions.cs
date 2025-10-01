@@ -1,8 +1,8 @@
-using Template.Core.Models.ViewModels;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Template.Core.Models.ViewModels;
 
 namespace Template.Api.Extensions;
 
@@ -14,12 +14,10 @@ public static class ValidationExtensions
             .AddControllers(o => o.Filters.Add(typeof(ValidationFilter)))
             .ConfigureApiBehaviorOptions(o => o.SuppressModelStateInvalidFilter = true);
 
-        services.AddFluentValidationAutoValidation();
-
-        services.AddFluentValidationClientsideAdapters();
+        services.AddFluentValidationAutoValidation().AddFluentValidationClientsideAdapters();
 
         // TODO: Register all validators in assembly
-        // services.AddValidatorsFromAssemblyContaining<CadastroClienteInputModelValidator>();
+        // services.AddValidatorsFromAssemblyContaining<AddClientInputModelValidator>();
 
         return services;
     }

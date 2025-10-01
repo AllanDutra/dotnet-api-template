@@ -1,7 +1,7 @@
 using System.Reflection;
-using Template.Core;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using Template.Core;
 
 namespace Template.Api.Extensions;
 
@@ -13,7 +13,7 @@ public static class SwaggerExtensions
         {
             AddSwaggerDocumentation(c);
 
-            // AddSwaggerAuthentication(c);
+            AddSwaggerAuthentication(c);
         });
 
         return services;
@@ -51,35 +51,35 @@ public static class SwaggerExtensions
         Array.ForEach(xmlDocs, (d) => c.IncludeXmlComments(d));
     }
 
-    // private static void AddSwaggerAuthentication(SwaggerGenOptions c)
-    // {
-    //     c.AddSecurityDefinition(
-    //         "Bearer",
-    //         new OpenApiSecurityScheme
-    //         {
-    //             Name = "Authorization",
-    //             Type = SecuritySchemeType.Http,
-    //             Scheme = "Bearer",
-    //             In = ParameterLocation.Header,
-    //             Description = "JWT Authorization Header using Bearer method.",
-    //         }
-    //     );
+    private static void AddSwaggerAuthentication(SwaggerGenOptions c)
+    {
+        c.AddSecurityDefinition(
+            "Bearer",
+            new OpenApiSecurityScheme
+            {
+                Name = "Authorization",
+                Type = SecuritySchemeType.Http,
+                Scheme = "Bearer",
+                In = ParameterLocation.Header,
+                Description = "JWT Authorization Header using Bearer method.",
+            }
+        );
 
-    //     c.AddSecurityRequirement(
-    //         new OpenApiSecurityRequirement
-    //         {
-    //             {
-    //                 new OpenApiSecurityScheme
-    //                 {
-    //                     Reference = new OpenApiReference
-    //                     {
-    //                         Type = ReferenceType.SecurityScheme,
-    //                         Id = "Bearer",
-    //                     },
-    //                 },
-    //                 Array.Empty<string>()
-    //             },
-    //         }
-    //     );
-    // }
+        c.AddSecurityRequirement(
+            new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer",
+                        },
+                    },
+                    Array.Empty<string>()
+                },
+            }
+        );
+    }
 }

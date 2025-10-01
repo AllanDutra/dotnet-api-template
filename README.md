@@ -39,9 +39,17 @@ O objetivo deste template é simplificar o processo de criação de uma nova API
 
 7. Altere dentro da classe Constants.cs, presente na camada Template.Core, a variável ApplicationName para também o nome da sua aplicação;
 
-8. Por fim, basta executar seu git init e seguir com o código do seu novo projeto!
+8. Dentro da pasta src, crie a sua solução executando a seguinte linha de comando:
 
-9. Caso tenha alguma sugestão de melhoria para o template, crie um PullRequest adicionando seus comentários na seção "🎈 Sugestões" deste arquivo README.md.
+    ```dotnet new sln --name SeuProjeto```
+
+9. Após isso, ainda dentro da pasta src, adicione seu projeto API à solução criada:
+
+    ```dotnet sln add ./SeuProjeto.API/SeuProjeto.API.csproj```
+
+10. Por fim, basta executar seu git init e seguir com o código do seu novo projeto!
+
+11. Caso tenha alguma sugestão de melhoria para o template, crie um PullRequest adicionando seus comentários na seção "🎈 Sugestões" deste arquivo README.md.
 
 ## ⚠️ Atualizações
 

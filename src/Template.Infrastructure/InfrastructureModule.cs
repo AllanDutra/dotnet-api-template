@@ -1,3 +1,5 @@
+using Microsoft.Extensions.DependencyInjection;
+
 namespace Template.Infrastructure;
 
 public static class InfrastructureModule
