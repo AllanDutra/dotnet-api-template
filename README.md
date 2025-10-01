@@ -47,9 +47,15 @@ O objetivo deste template é simplificar o processo de criação de uma nova API
 
     ```dotnet sln add ./SeuProjeto.API/SeuProjeto.API.csproj```
 
-10. Por fim, basta executar seu git init e seguir com o código do seu novo projeto!
+10. Altere dentro do seu Dockerfile e docker-compose.yml onde estiver "template" para o nome do seu projeto;
 
-11. Caso tenha alguma sugestão de melhoria para o template, crie um PullRequest adicionando seus comentários na seção "🎈 Sugestões" deste arquivo README.md.
+11. Entre dentro da pasta da camada Api e execute os comandos `dotnet restore` e `dotnet build` para assegurar que tudo está funcionando normalmente;
+
+12. Se tiver feito corretamente todos os passos anteriores, ao executar `dotnet run` seu Swagger estará disponível em http://localhost:5504;
+
+13. Por fim, basta executar seu git init na pasta raíz e seguir com o código do seu novo projeto!
+
+14. Caso tenha alguma sugestão de melhoria para o template, crie um PullRequest adicionando seus comentários na seção "🎈 Sugestões" deste arquivo README.md.
 
 ## ⚠️ Atualizações
 

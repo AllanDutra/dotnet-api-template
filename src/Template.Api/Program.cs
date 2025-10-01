@@ -8,6 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.WebHost.ConfigureKestrel(p => p.ListenAnyIP(5504));
+
 // ? To add swagger
 builder.Services.AddEndpointsApiExplorer();
 

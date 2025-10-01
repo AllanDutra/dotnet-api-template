@@ -1,0 +1,11 @@
+services:
+  template-api:
+    image: template-api:1.0.0 # Sempre que atualizar algum recurso, altere a versão
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=dev
+    ports:
+      - "5504:8080"
+    restart: always
