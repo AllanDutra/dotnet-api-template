@@ -23,7 +23,7 @@ O objetivo deste template é simplificar o processo de criação de uma nova API
 
 ## 🖐🏼 Hands-On, como implementar
 
-<img height="20" src="https://ik.imagekit.io/ghmg33v8b/technologies-logos/youtube_OJovsWaYF.png?updatedAt=1759543348186" /> Passo a passo no [YouTube](https://youtu.be/IcpJcf83hBk)
+<img height="10" src="https://ik.imagekit.io/ghmg33v8b/technologies-logos/youtube_OJovsWaYF.png?updatedAt=1759543348186" /> Passo a passo no [YouTube](https://youtu.be/IcpJcf83hBk)
 
 1. Faça o clone do projeto para a sua máquina;
 
