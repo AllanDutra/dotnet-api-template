@@ -1,5 +1,5 @@
 using System.Reflection;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Template.Core;
 
@@ -54,32 +54,19 @@ public static class SwaggerExtensions
     private static void AddSwaggerAuthentication(SwaggerGenOptions c)
     {
         c.AddSecurityDefinition(
-            "Bearer",
+            "bearer",
             new OpenApiSecurityScheme
             {
-                Name = "Authorization",
                 Type = SecuritySchemeType.Http,
-                Scheme = "Bearer",
-                In = ParameterLocation.Header,
+                Scheme = "bearer",
+                BearerFormat = "JWT",
                 Description = "JWT Authorization Header using Bearer method.",
             }
         );
 
-        c.AddSecurityRequirement(
-            new OpenApiSecurityRequirement
-            {
-                {
-                    new OpenApiSecurityScheme
-                    {
-                        Reference = new OpenApiReference
-                        {
-                            Type = ReferenceType.SecurityScheme,
-                            Id = "Bearer",
-                        },
-                    },
-                    Array.Empty<string>()
-                },
-            }
-        );
+        c.AddSecurityRequirement(document => new OpenApiSecurityRequirement
+        {
+            [new OpenApiSecuritySchemeReference("bearer", document)] = []
+        });
     }
 }

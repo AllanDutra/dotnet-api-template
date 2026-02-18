@@ -4,7 +4,7 @@ O objetivo deste template é simplificar o processo de criação de uma nova API
 
 ## ℹ️ Versão do Framework
 
-.NET 8.0 - A versão LTS no momento da criação do template.
+.NET 10.0 - A versão LTS no momento da criação do template.
 
 ## 💭 O que já está implementado
 
